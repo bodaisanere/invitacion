@@ -2,16 +2,6 @@
 
 Invitación web de la boda, hecha con React 19 + Vite + Tailwind CSS 4.
 
-## Desarrollo
-
-```bash
-pnpm install
-pnpm dev          # http://localhost:5173
-pnpm lint
-pnpm build        # genera dist/
-pnpm preview      # sirve dist/ localmente
-```
-
 ## Estructura
 
 ```
@@ -60,7 +50,7 @@ Todo lo editable está en **`src/data/boda.js`**:
 El sitio se publica en la rama `gh-pages` y se ve en:
 
 ```
-https://<usuario>.github.io/boda-nere-isa/
+https://bodaisanere.github.io/invitacion/
 ```
 
 ### 1. Crear el repositorio y subir el código
@@ -69,7 +59,7 @@ https://<usuario>.github.io/boda-nere-isa/
 git init -b main
 git add .
 git commit -m "Invitación boda Nere e Isa"
-git remote add origin https://github.com/<usuario>/boda-nere-isa.git
+git remote add origin https://github.com/bodaisanere/invitacion.git
 git push -u origin main
 ```
 
@@ -98,4 +88,4 @@ En 1–2 minutos queda online. Cada push a `main` (o cada `pnpm deploy`)
 actualiza el sitio.
 
 > **Nota:** `vite.config.js` usa `base: "./"`, así que funciona tanto en
-> `usuario.github.io/boda-nere-isa/` como en un dominio propio, sin tocar nada.
+> `bodaisanere.github.io/invitacion/` como en un dominio propio, sin tocar nada.
