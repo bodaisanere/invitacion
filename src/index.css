@@ -1,0 +1,97 @@
+@import url("https://use.typekit.net/qwe2mqk.css");
+@import "tailwindcss";
+
+@theme {
+  --font-area-extended: "area-extended-light", sans-serif;
+  --font-baskerville: "baskerville", serif;
+  --font-qonelya: "qonelya", serif;
+  --color-beige: #f7f9ec;
+  --color-celeste: #8192a4;
+  --color-rojo: #a24943;
+  --color-verde: #7e8870;
+  --color-negro: #353535;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "baskerville";
+  overflow-x: hidden;
+}
+
+/* ————— Animaciones de entrada (Reveal) ————— */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(24px);
+}
+
+.reveal-fade {
+  transform: none;
+}
+
+.reveal-scale {
+  transform: scale(0.96);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ————— Rebote suave para la “V” de DESLIZA ————— */
+@keyframes v-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+.animate-v-bounce {
+  display: inline-block;
+  animation: v-bounce 1.8s ease-in-out infinite;
+}
+
+/* Respetar accesibilidad: sin movimiento si el usuario lo pidió */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-v-bounce {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@font-face {
+  font-family: "baskerville";
+  src: url(./assets/fonts/Baskerville.ttc) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "qonelya";
+  src: url(./assets/fonts/Qonelya.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
