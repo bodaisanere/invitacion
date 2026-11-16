@@ -6,7 +6,7 @@ export const boda = {
   // Links externos. Por ahora "#" hasta que pases las URLs reales.
   links: {
     // URL de Google Maps del salón.
-    ubicacionUrl: "https://share.google/WH8tSMPK2K0VSZGij",
+    ubicacionUrl: "https://maps.app.goo.gl/WG9DpeJahaULLsAG7",
     // URL del Google Form de confirmación de asistencia.
     confirmarUrl: "https://forms.gle/FWKfYnwbYBRyDKk7A",
   },
